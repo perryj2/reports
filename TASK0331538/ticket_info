@@ -16,4 +16,7 @@ Other Info:
 
 To pull on all TMs who have reported to Sreeni Kana, there where clause would be: WHERE REPORTS_TO = '00003160' (This is Sreeni's Position Number - all corp team members are in Position Management)
 
-You will need to pull the TOS record for each Team Member in list, if TM reported to Sreeni during multiple employment periods, then that TM would have a record for each employment period in the results.
+You will need to pull the TOS record for each Team Member in list, if TM reported to Sreeni during multiple employment periods, then that TM would have a record for each employment period in the results.CP
+
+@Jacob Perry, I almost forgot, you will also be using:
+[HCMSECPROD1,50200].[HRDBPRD].[PSHRMS].[PS_PERSON_NAME]
