@@ -1,0 +1,19 @@
+Sreeni Kanna (Empl ID: 0315940) needs a report that obtains all resources (both FTE and contractors) 
+who have been on his time over the last three years, specifically August 2022 to present, including hire and termination dates.
+
+
+
+@Jacob Perry, I suggest the report include the following fields:
+EMPL ID, NAME, JOB CODE, JOB TITLE, HIRE DT, TERM DT
+
+You will be using the following dbos from HRDataMart.
+[HCMSECPROD1,50200].[HRDBPRD].[PSHRMS].[PS_JOB]
+HRDataMart.hcm.DIM_JOBCODE_TOS_VW
+Possibly:
+[HCMSECPROD1,50200].HRDBPRD.PSHRMS.PS_POSITION_DATA
+
+Other Info:
+
+To pull on all TMs who have reported to Sreeni Kana, there where clause would be: WHERE REPORTS_TO = '00003160' (This is Sreeni's Position Number - all corp team members are in Position Management)
+
+You will need to pull the TOS record for each Team Member in list, if TM reported to Sreeni during multiple employment periods, then that TM would have a record for each employment period in the results.
